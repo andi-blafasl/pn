@@ -19,7 +19,7 @@ class Application
             'ttl' => 60
         ],
         'domains' => [
-            'www.party-nanny.de'
+            'www.domain.example'
         ],
         'services' => [
             'GooglePlus',

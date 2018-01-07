@@ -1,6 +1,6 @@
 <?php
   // Logfile location
-  $logfile = "/srv/www/vhosts/party-nanny.de/tmp/contact.log";
+  $logfile = sys_get_temp_dir()."/contact.log";
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,10 +24,10 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "andi@blafasl.de";
+        $recipient = "sender@domain.example";
 
         // Set the email subject.
-        $subject = "Kontaktformular party-nanny.de: $name";
+        $subject = "Kontaktformular domain.example: $name";
 
         // Build the email content.
         $email_content = "Eine Nachricht von $name\n";
@@ -35,7 +35,7 @@
         $email_content .= "Nachricht:\n$message\n";
 
         // Build the email headers.
-        $email_headers = "From: $name <domain-admin@blafasl.de>\n";
+        $email_headers = "From: $name <valid@domain.example>\n";
         $email_headers .= "Reply-To: $name <$email>\n";
         $email_headers .= "Return-Path: $name <$email>\n"; 
         $email_headers .= "Content-Type: text/plain\n"; 

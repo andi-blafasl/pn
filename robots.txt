@@ -1,6 +1,5 @@
-Sitemap: http://www.party-nanny.de/sitemap.xml 
+Sitemap: http://www.domain.example/sitemap.xml 
 
 User-agent: *
-Disallow: /images/warum.jpg$
-Disallow: /images/home.jpg$
+Disallow: /images/
 
