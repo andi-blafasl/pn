@@ -1,0 +1,43 @@
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  ##
+  #check if HTTPS
+  RewriteCond %{SERVER_PORT}s ^(443(s)|[0-9]+s)$
+  RewriteRule ^(.*)$ - [env=tls:%2]
+
+  #redirect non www access to www (eg: example.org -> www.example.org)
+  RewriteCond %{HTTP:Host} ^(?!www\.)(.+)$ [NC]
+  RewriteRule .? http%{ENV:tls}://www.%1%{REQUEST_URI} [R=301,L]
+
+</IfModule>
+
+## Cache Control
+
+# Expire Headers
+<IfModule mod_expires.c>
+  ExpiresActive On 
+  ExpiresByType image/x-icon "access plus 1 week" 
+  ExpiresByType image/gif "access plus 1 week"  
+  ExpiresByType image/jpg "access plus 1 week"  
+  ExpiresByType image/png "access plus 1 week"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType application/x-javascript "access plus 1 week" 
+</IfModule>
+
+# Cache-Control Headers
+<ifmodule mod_headers.c>
+  <filesmatch "\\.(ico|jpe?g|png|gif|swf)$">
+        Header set Cache-Control "max-age=604800, public, must-revalidate"
+  </filesmatch>
+  <filesmatch "\\.(css)$">
+        Header set Cache-Control "max-age=,604800 private, must-revalidate"
+  </filesmatch>
+  <filesmatch "\\.(js)$">
+        Header set Cache-Control "max-age=604800, private, must-revalidate"
+  </filesmatch>
+</ifmodule>

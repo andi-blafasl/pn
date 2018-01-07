@@ -1,0 +1,214 @@
+﻿/* import google fonts */
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(//fonts.googleapis.com/css?family=Crafty+Girls);
+
+/* general styles */
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+/* home section */
+.home {
+  margin-top: 55px;
+}
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vcenter img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+.text-vcenter h1 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+	.text-vcenter h1 {
+	  font-size: 3em;
+	  font-weight: 600;
+	  margin: 0;
+	  padding: 10px;
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.text-vcenter h1 {
+	  font-size: 4em;
+	  font-weight: 700;
+	  margin: 0;
+	  padding: 10px;
+	}
+}
+
+
+
+/* additional settings for some tags */
+.nav {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+}
+.navbar-brand {
+  color: orange !important;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Crafty Girls', cursive;
+}
+h1, h2 {
+  font-family: 'Crafty Girls', cursive;
+}
+.shariff {
+  margin: 50px auto;
+  padding: 10px 10px 0px 10px;
+  background-color: #ffffff;
+  opacity: 0.85;
+  max-width: 515px;
+}
+.shariff-small {
+  padding: 5px 10px 5px 10px;
+  max-width: 200px;
+}
+.shariff li a {
+  padding-left: 0px !important;
+}
+
+/* additional sections */
+#anfang {
+  background: url(../images/home.jpg) no-repeat center center fixed; 
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#anfang .banner{
+  background-color: #ffffff;
+  opacity: 0.85;
+}
+
+#warum {
+  background-color: #5599FF;
+  color: #FFFFFF;
+}
+#warum1 {
+  background: url(../images/warum.jpg) no-repeat center center fixed; 
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#warum1 .panel {
+  opacity: 0.85;
+}
+
+#angebot {
+  background-color: #FF5555;
+  color: #ffffff;
+}
+#angebot .col-xs-6 {
+  min-height: 290px;
+}
+#angebot .glyphicon {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+#vorteile {
+  background-color: #5FD35F;
+  color: #ffffff;
+}
+#vorteile .list-group-item {
+  background-color: #5FD35F;
+}
+
+#uber-mich {
+  background-color: #FFD42A;
+}
+#uber-mich img {
+	max-width: 201px;
+}
+#uber-mich hr {
+  border-top: 1px solid #848484;
+}
+
+#kosten {
+  background-color: #5599FF;
+  color: #FFFFFF
+}
+#kosten .list-group-item {
+  background-color: #5599FF;
+}
+
+#kontakt {
+  background-color: #FF7F2A;
+  color: #FFFFFF;
+}
+#kontakt a {
+  display: inline-block;
+}
+#kontakt a:link, #kontakt a:visited, #kontakt a:active, #kontakt a:hover { 
+  text-decoration:none;
+  color:#FFFFFF;
+} 
+#kontakt a:hover { 
+  text-decoration:underline;
+}
+#kontaktlist .glyphicon {
+/*  border: 2px solid #FFFFFF;
+  border-radius: 50%; */
+  display: inline-block;
+  font-size: 60px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100px;
+}
+
+#google_map {
+  height: 500px;
+}
+
+footer {
+  padding: 20px 0;
+}
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+footer .glyphicon:hover {
+  color: #306d9f;
+}
